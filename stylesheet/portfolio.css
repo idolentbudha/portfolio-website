@@ -1,169 +1,191 @@
 /***** GENERAL STYLING *****/
 /* Body */
-html{
-    font-size: 62.5%; /* This sets the base font size to 10px, allowing us to use rem units for easier scaling */
+html {
+  font-size: 62.5%; /* This sets the base font size to 10px, allowing us to use rem units for easier scaling */
 }
 body {
-    margin: 0%;  /* This ensures our site displays all the way to the edge of the browser screen */
-    font-size: 1.6rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0%;
+  font-size: 1.6rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 /* Heading 1 elements */
 h1 {
-    text-transform: uppercase; /* Capitalizing all h1 headings */
-    font-family: "Trebuchet MS", Optima; /* Sets the font family of all h1 headings */
-    text-align: center; /* Centering all h1 elements */
-    margin-top: 3%; /* Adds a small margin above h1 elements */
-    color: #1a1a1a;
-    font-size: clamp(1rem, 5vw + 1rem, 3rem);
+  text-transform: uppercase; /* Capitalizing all h1 headings */
+  font-family: "Trebuchet MS", Optima; /* Sets the font family of all h1 headings */
+  margin-top: 3%; /* Adds a small margin above h1 elements */
+  color: #1a1a1a;
+  font-size: clamp(1rem, 5vw + 1rem, 3rem);
 }
 
 /* Heading 1 element hover effect */
 h1:hover {
-    filter: grayscale(5%); /* Adds a slightly gray filter to the h1 headings when hovered over */
-    transform: scale(1.1); /* When the h1 elements are hovered over they increase in size by 1.1 */
-    transition: transform 1s; /* This causes the transformation to last 1 second */
+  filter: grayscale(
+    5%
+  ); /* Adds a slightly gray filter to the h1 headings when hovered over */
+  /* transform: scale(1.1); 
+    transition: transform 1s;  */
 }
 
 /* Styling for portfolio title text */
 .white-text {
-    color: #fff; /* This is used to change the color of the portfolio title text */
+  color: #fff; /* This is used to change the color of the portfolio title text */
 }
 
 /* Paragraph elements */
 p {
-    text-align: justify; /* Justify text within paragraph elements */
-    letter-spacing: 1px; /* This expands the text slightly */
-    font-size: clamp(1rem, 0.8vw + 0.5rem, 1.6rem);
-    padding-left: 20px; /* Adds padding to the left of the paragraph element */
-    padding-right: 20px; /* Adds padding to the right of the paragraph element */
+  text-align: justify; /* Justify text within paragraph elements */
+  letter-spacing: 1px; /* This expands the text slightly */
+  font-size: clamp(1rem, 0.8vw + 0.5rem, 1.6rem);
+  padding-left: 20px; /* Adds padding to the left of the paragraph element */
+  padding-right: 20px; /* Adds padding to the right of the paragraph element */
 }
 
 /* Paragraph element hover effect */
 p:hover {
-    transition: transform 1s; /* This makes the transform effect last 1 second */
-	transform: scale(1.01); /* This makes the paragraphs increase slightly in size when hovered over */
+  transition: transform 1s; /* This makes the transform effect last 1 second */
+  transform: scale(
+    1.01
+  ); /* This makes the paragraphs increase slightly in size when hovered over */
 }
 
 /* Center class - this applies to all elements with the class "center" */
 .center {
-    text-align: center; /* This center aligns the text */
+  text-align: center; /* This center aligns the text */
 }
 
 /* Center class hover effect - This only affects the quote, github link, and footer */
 .center:hover {
-    transition: transform 2s; /* This makes the transform effect last 2 seconds */
-    transform: scale(1.1); /* This makes the elements with class "center" increase in size by 1.1 when hovered over */
+  transition: transform 2s; /* This makes the transform effect last 2 seconds */
+  transform: scale(
+    1.1
+  ); /* This makes the elements with class "center" increase in size by 1.1 when hovered over */
 }
 
 /* Anchor elements */
 a {
-    color: blue; /* This ensures all links are blue */
+  color: #ffd583;
+  text-decoration: none;
 }
 
 /* Quotation elements */
 q {
-    font-style: italic; /* This makes the quote italicized */
+  font-style: italic; /* This makes the quote italicized */
 }
 
 /* Image elements */
 img {
-    filter: grayscale(75%); /* This rids our pictures of 75% of their color */
-    border-radius: 8px; /* Gives all images slightly rounded corners */
-    max-width: 100%; /* Ensures all images stay within the width of their container */
-    height: 340px; /* Sets the height of all images */
-    display: block; /* By specifying block display we can ensure our images are able to be centered */
-    margin-left: auto; /* In combination with "margin-right: auto" this centers all images */
-    margin-right: auto;
+  filter: grayscale(75%); /* This rids our pictures of 75% of their color */
+  border-radius: 8px; /* Gives all images slightly rounded corners */
+  max-width: 100%; /* Ensures all images stay within the width of their container */
+  height: 340px; /* Sets the height of all images */
+  display: block; /* By specifying block display we can ensure our images are able to be centered */
+  margin-left: auto; /* In combination with "margin-right: auto" this centers all images */
+  margin-right: auto;
 }
 
 /* Image element hover effects */
 img:hover {
-	filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
-    transition: transform 1s; /* Transition lasts 1 second */
-	transform: scale(1.1); /* Image is increased slightly when hovered over */
-}
-
-/* The @media rule is used in media queries to apply different styles for different media/types of devices */
-/* On screens 576px and smaller the images will be 100px tall and centered vertically in the column */
-@media screen and (max-width: 576px) {
-    avatar-container img {
-        height: 100px;
-    }
+  filter: grayscale(
+    5%
+  ); /* Brings back most of the image's color when hovered over */
+  transition: transform 1s; /* Transition lasts 1 second */
+  transform: scale(1.1); /* Image is increased slightly when hovered over */
 }
 
 /* Styling for footer element */
 footer {
-    padding: 2%; /* This gives the footer padding that is equal to 2% of the width of the element's area */
-    background-color: white;
+  padding: 2%; /* This gives the footer padding that is equal to 2% of the width of the element's area */
+  background-color: white;
 }
 /***** END OF GENERAL STYLING *****/
 
 /***** NAVBAR STYLING *****/
 .Navbar {
-    overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
-    background-color: black; /* This colors the navbar black */
-    position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
-    top: 0; /* This ensures no space is displayed above the navbar */
-    width: 100%; /* This makes the navbar span the entire width of the page */
-    z-index: 1; /* This ensures other elements don't display over the navbar */
+  overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
+  background-color: black; /* This colors the navbar black */
+  position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
+  top: 0; /* This ensures no space is displayed above the navbar */
+  width: 100%; /* This makes the navbar span the entire width of the page */
+  z-index: 1; /* This ensures other elements don't display over the navbar */
 }
-
-
 
 /* Navbar links */
 .Navbar a {
-    float: left; /* This specifies that the text floats on the left on the navbar */
-    display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
-    color: white; /* This is the font color for text on our navbar */
-    padding: 14px 16px; /* This adds padding around our text */
-    text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
-    font-family: Avant Garde, Helvetica; /* This specifies the font family for text on our navbar */
-    font-size: 20px; /* This specifies the font size for text on our navbar */
-    text-align: center; /* This centers the text within its container */
-    position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
+  float: left; /* This specifies that the text floats on the left on the navbar */
+  display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
+  color: white; /* This is the font color for text on our navbar */
+  padding: 14px 16px; /* This adds padding around our text */
+  text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
+  font-family:
+    Avant Garde,
+    Helvetica; /* This specifies the font family for text on our navbar */
+  font-size: 20px; /* This specifies the font size for text on our navbar */
+  text-align: center; /* This centers the text within its container */
+  position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
 }
-
-
 
 /* Screens 576px and smaller will display navbar links equally distributed */
 @media screen and (max-width: 576px) {
-    .Navbar a{
-        width: 25%; /* This makes each link take up 1/4 of the navbar */
-        font-size: 12px;
-    }
+  .Navbar a {
+    width: 25%; /* This makes each link take up 1/4 of the navbar */
+    font-size: 12px;
+  }
 }
 
 /* Navbar hover effects */
 .Navbar a:hover {
-    background-color: #f4f4f4; /* Defines the background color that will display when you hover over the link */
-    color: black; /* This defines the font color that will display when navbar a elements are hovered over */
-    font-weight: bold; /* This makes the text on the navbar bold when hovered over */
+  background-color: #f4f4f4; /* Defines the background color that will display when you hover over the link */
+  color: black; /* This defines the font color that will display when navbar a elements are hovered over */
+  font-weight: bold; /* This makes the text on the navbar bold when hovered over */
 }
 
 /* Navbar home button */
-.Navbar a.active { /* This targets the a element on the navbar with the "active" class */
-    background-color: #a9a9a9;
+.Navbar a.active {
+  /* This targets the a element on the navbar with the "active" class */
+  background-color: #a9a9a9;
 }
 /***** END OF NAVBAR STYLING *****/
-#Home{
-    height: 62vh;
+
+.container {
+  padding: 20px;
+  background-color: #fff;
+  width: 100%;
 }
-@media screen and (max-width: 1080px) {
-    #Home{
-        height: 50vh;
-    }
+
+#Home {
+  height: 100vh;
+}
+
+.home-container {
+  background: linear-gradient(
+    360deg,
+    rgba(15, 26, 31, 0.5) 50%,
+    rgba(125, 125, 125, 0.5) 69%,
+    rgba(255, 255, 255, 0.5) 91%
+  ); /* This provides a semi-transparent background for the text to sit over */
+  color: white; /* Makes the font color white */
+  width: 100%; /* Ensures the video-text container fills the width of the video */
+  position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
+  /* -webkit-animation: moveVideoText 5.75s; */
+  /* animation: moveVideoText 5.75s; */
+  /* display: flex; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /***** VIDEO STYLING *****/
 /* Formatting for background video */
 #Typing_Video {
-    position: fixed; /* This fixes the video to the page */
-    right: 0; /* This ensures there is no space between the edge of the video and the edge of the page */
-    top: 0; /* This ensures no space between the bottom of the video and the bottom of the page */
-    min-width: 100%; /* This ensures the video is displayed across the full width of the page */
-    z-index: -1; /* This places the video behind the other elements on the page */
+  position: fixed; /* This fixes the video to the page */
+  right: 0; /* This ensures there is no space between the edge of the video and the edge of the page */
+  top: 0; /* This ensures no space between the bottom of the video and the bottom of the page */
+  min-width: 100%; /* This ensures the video is displayed across the full width of the page */
+  z-index: -1; /* This places the video behind the other elements on the page */
 }
 
 /* Screens that are 576px and smaller will not display the background video */
@@ -174,306 +196,356 @@ footer {
 } */
 
 .avatar-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 1, 0.03);   
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.avatar-heading{
-    font-size: 4rem;
-    color: #ffd583;
-    font-family: fantasy;
-    line-height: 1.5px;
+.avatar-heading {
+  font-size: 4rem;
+  color: #ffd583;
+  font-family: fantasy;
+  line-height: 1.5px;
 }
 
-.avatar-container img{
-    min-height: 100px;
-    max-height: 200px;
+.avatar-container img {
+  max-height: 200px;
+}
+
+/* The @media rule is used in media queries to apply different styles for different media/types of devices */
+/* On screens 576px and smaller the images will be 100px tall and centered vertically in the column */
+@media screen and (max-width: 576px) {
+  .avatar-container img {
+    max-height: 150px;
+  }
 }
 
 #wave-emoji {
-    display: inline-block;
-    font-size: 4rem;
-    animation-name: wave;
-    animation-duration: 3s;
-    transform-origin: 70% 70%;
-    animation-iteration-count: 3;
-    animation-timing-function: linear;
+  display: inline-block;
+  font-size: 4rem;
+  animation-name: wave;
+  animation-duration: 3s;
+  transform-origin: 70% 70%;
+  animation-iteration-count: 3;
+  animation-timing-function: linear;
 }
 
 @keyframes wave {
-    0% { transform: rotate(0deg); } /* Start upright */
-    25% { transform: rotate(15deg); } /* Wave slightly right */
-    50% { transform: rotate(-10deg); } /* Wave slightly left */
-    75% { transform: rotate(10deg); } /* Wave slightly right again */
-    100% { transform: rotate(0deg); } /* Return to upright */
-}
-
-/* Texts over the video */
-.Video_Text {
-    background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
-    color: white; /* Makes the font color white */
-    width: 100%; /* Ensures the video-text container fills the width of the video */
-    position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
-    /* -webkit-animation: moveVideoText 5.75s; */
-    /* animation: moveVideoText 5.75s; */
-    /* display: flex; */
-    height: 100%;
-    padding:20px
+  0% {
+    transform: rotate(0deg);
+  } /* Start upright */
+  25% {
+    transform: rotate(15deg);
+  } /* Wave slightly right */
+  50% {
+    transform: rotate(-10deg);
+  } /* Wave slightly left */
+  75% {
+    transform: rotate(10deg);
+  } /* Wave slightly right again */
+  100% {
+    transform: rotate(0deg);
+  } /* Return to upright */
 }
 
 .button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
 }
 
-.button-container a{
-    text-decoration: none;
-    color: #ffd583;
-    padding: 10px 20px;
-    border-color: #ffd583;
-    border: solid 2px #ffd583;
-    font-family: Arial, Helvetica, sans-serif;
+.button-container a {
+  text-decoration: none;
+  color: #ffd583;
+  padding: 10px 20px;
+  border-color: #ffd583;
+  border: solid 2px #ffd583;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.button-container a:hover{
-    transform: scale(1.1);
-    transition: transform 0.5s ease-in-out; /* This increases the size of the button when hovered over */
+.button-container a:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out; /* This increases the size of the button when hovered over */
 }
 
 /* This animation effect causes the overlay video text to move up from the bottom of the page upon page load */
 @keyframes moveVideoText {
-    from {top: -100vw;} /* This sets the position of the video text to above the viewport */
-    to {top: 0vw;} /* This moves the video text to the normal positioning on the viewport */
+  from {
+    top: -100vw;
+  } /* This sets the position of the video text to above the viewport */
+  to {
+    top: 0vw;
+  } /* This moves the video text to the normal positioning on the viewport */
 }
 /***** END OF VIDEO STYLING *****/
 
 /***** TABLE STYLING -  this section covers the styling of the columns and rows within the table *****/
-* { /* The asterisk is a universal selector that applies this effect to all elements on the page */
-    box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
-} 
+* {
+  /* The asterisk is a universal selector that applies this effect to all elements on the page */
+  box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
+}
 
 .Column_1 {
-    float: left;
-    width: 50%; /* This ensures the column takes up half of the page width */
-    padding: 10px;
-    padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
-    height: 400px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
-    background-color: #f2f2f2; /* Sets the background color of the columns with class Column_1 */
+  float: left;
+  width: 50%; /* This ensures the column takes up half of the page width */
+  padding: 10px;
+  padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
+  height: 400px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
+  background-color: #f2f2f2; /* Sets the background color of the columns with class Column_1 */
 }
 
 /* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
 @media screen and (max-width: 576px) {
-    .Column_1 {
-        overflow: auto;
-    }
+  .Column_1 {
+    overflow: auto;
+  }
 }
 
 .Column_2 {
-    float: left;
-    width: 50%;
-    padding: 10px;
-    padding-top: 1.9%;
-    height: 400px;
-    background-color: #282727;
+  float: left;
+  width: 50%;
+  padding: 10px;
+  padding-top: 1.9%;
+  height: 400px;
+  background-color: #282727;
 }
 
 /* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
 .Column_tall {
-    padding-top: 3.5%;
-    height: 450px;
+  padding-top: 3.5%;
+  height: 450px;
 }
 
 /* This inserts something after the content of selected elements (in this case the elements with class "Row") */
 .Row:after {
-	content: ""; /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
-	display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
-	clear: both; /* This clears any other elements from floating on the left or the right of an element */
+  content: ""; /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
+  display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
+  clear: both; /* This clears any other elements from floating on the left or the right of an element */
 }
 /***** END OF TABLE STYLING *****/
 
 /***** CONTACT FORM STYLING *****/
 /* input[type=text] targets all text input sections of the contact form */
-input[type=text] {
-    width: 100%; /* Each input box covers the full width of the container */
-    padding: 12px; /* Adds padding within the text box */
-    border: 1px solid #ccc; /* Setting a solid border and its color */
-    border-radius: 4px; /* Slightly rounds the corners of the text box border */
-    box-sizing: border-box; /* This creates a box with a border around the contact form input boxes */
-    margin-top: 6px; /* Adds a margin to the top of the text box */
-    margin-bottom: 16px; /* Adds a margin to the bottom of the text box */
-    resize: vertical; /* This allows the user to resize the text boxes vertically */
-    font-family: Perpetua, Rockwell Extra Bold;
+input[type="text"] {
+  width: 100%; /* Each input box covers the full width of the container */
+  padding: 12px; /* Adds padding within the text box */
+  border: 1px solid #ccc; /* Setting a solid border and its color */
+  border-radius: 4px; /* Slightly rounds the corners of the text box border */
+  box-sizing: border-box; /* This creates a box with a border around the contact form input boxes */
+  margin-top: 6px; /* Adds a margin to the top of the text box */
+  margin-bottom: 16px; /* Adds a margin to the bottom of the text box */
+  resize: vertical; /* This allows the user to resize the text boxes vertically */
+  font-family:
+    Perpetua,
+    Rockwell Extra Bold;
 }
 
 /* Hover effects for input boxes */
-input[type=text]:hover {
-    box-shadow: 0 0 5px #00004d inset; /* This creates a blue shadow in the text box when hovered over by the user */
+input[type="text"]:hover {
+  box-shadow: 0 0 5px #00004d inset; /* This creates a blue shadow in the text box when hovered over by the user */
 }
 
 /* Submit button */
-input[type=submit] {
-    background-color: black; /* Sets the background color of the submit button to black */
-    color: white; /* Sets the font color of the Submit button to white */
-    font-weight: bold; /* Makes the font of the submit button bold */
-    padding: 12px 20px; /* Adds padding to the submit button */
-    border: none; /* Removes the border from the submit button */
-    border-radius: 4px; /* Gives the submit button the same rounded corners as the text boxes */
-    cursor: pointer; /* Changes the cursor to pointer when over the submit button */
-    display: block; /* Allows the submit button to be centered */
-    margin-left: auto; /* In combination with "margin-right: auto" this will center the submit button */
-    margin-right: auto;
-    font-family: Perpetua, Rockwell Extra Bold;
+input[type="submit"] {
+  background-color: black; /* Sets the background color of the submit button to black */
+  color: white; /* Sets the font color of the Submit button to white */
+  font-weight: bold; /* Makes the font of the submit button bold */
+  padding: 12px 20px; /* Adds padding to the submit button */
+  border: none; /* Removes the border from the submit button */
+  border-radius: 4px; /* Gives the submit button the same rounded corners as the text boxes */
+  cursor: pointer; /* Changes the cursor to pointer when over the submit button */
+  display: block; /* Allows the submit button to be centered */
+  margin-left: auto; /* In combination with "margin-right: auto" this will center the submit button */
+  margin-right: auto;
+  font-family:
+    Perpetua,
+    Rockwell Extra Bold;
 }
 
 /* Hover effect for submit button */
-input[type=submit]:hover {
-    background-color: white; /* Turns the background of the submit button white when the user hovers over it */
-    color: black; /* Turns the font black when hovered over */
-    transform: scale(1.5); /* Makes the button increase 1.5 times in size */
-    transition: transform 1.5s; /* Makes the transform effect last 1.5 seconds */
+input[type="submit"]:hover {
+  background-color: white; /* Turns the background of the submit button white when the user hovers over it */
+  color: black; /* Turns the font black when hovered over */
+  transform: scale(1.5); /* Makes the button increase 1.5 times in size */
+  transition: transform 1.5s; /* Makes the transform effect last 1.5 seconds */
 }
 
 /* Form element */
 form {
-    border-radius: 5px; /* Rounds the corners of the contact form */
-    background-color: #f2f2f2; 
-    padding: 30px; /* Adds padding to the contact form */
-    font-family: "Trebuchet MS", Optima;
+  border-radius: 5px; /* Rounds the corners of the contact form */
+  background-color: #f2f2f2;
+  padding: 30px; /* Adds padding to the contact form */
+  font-family: "Trebuchet MS", Optima;
 }
 /***** END OF CONTACT FORM STYLING *****/
 
 /***ABOUTUS SECTION - TECHSTACK STYLING ***/
+#About {
+  min-height: 100vh;
+  background-color: #282727;
+  padding: 5vw 10vw;
+}
+#About h1 {
+  color: #fff;
+}
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the about container */
+  padding: 20px;
+  background-color: #282727; /* Sets the background color of the about section */
+  color: #fff; /* Sets the text color to white */
+}
+
+.about-container h1 {
+  color: #fff;
+  text-align: left;
+}
+
 .tech-stack-container {
-    display: flex;
-    flex-direction: column; 
-    border-radius: 5px;
-    height: 93%;
-    max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  /* flex-flow: wrap; */
+  border-radius: 5px;
+  height: 93%;
+  width: 100%;
+  overflow: hidden;
 }
 .tech-stack-container h1 {
-    color: #fff;;
+  color: #fff;
 }
-.tech-stack-container p {
-color: #fff;    
-}
-.tech-stack-item p{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
+
 .tech-stack-images {
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start; /* Centers the tech stack items horizontally */
-    align-items: flex-start;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 10px 0;
+  gap: 30px;
+}
+.tech-stack-item {
+  background-color: #4e4a4a;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  min-width: 150px;
+}
+
+.tech-stack-item p {
+  color: #fff;
+  text-align: center;
+}
+
+.tech-stack-item:hover {
+  background-color: rgb(255, 213, 131, 0.8);
+
+  transition: background-color 0.3s ease-in-out;
+}
+.tech-stack-item:hover p {
+  color: #4e4a4a;
 }
 
 .tech-logo {
-    filter: grayscale(30%);
-    width: 50px; /* Sets a fixed width for the tech logos */
-    height: auto; /* Maintains aspect ratio */ /* Adds space between the logo and the text */
-    padding: 2px; /* Adds padding around the logo */
+  filter: grayscale(30%);
+  width: 50px; /* Sets a fixed width for the tech logos */
+  height: auto; /* Maintains aspect ratio */ /* Adds space between the logo and the text */
+  padding: 2px; /* Adds padding around the logo */
 }
 
 /** Github Projects */
 .github-projects-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers the projects container */
-    max-width: 100%;
-    margin: 0 auto; 
-    padding:30px;
-    background-color: #3c3e42;
-    /* background-color: #ffd583; */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the projects container */
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #3c3e42;
+  /* background-color: #ffd583; */
 }
 
-.github-projects-container h1{
-    color:#fff;
+.github-projects-container h1 {
+  color: #fff;
 }
 .github-projects {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
 }
 
 .github-project {
-    display: flex;
-    flex-direction: row;
-    border-radius: 5px;
-    padding: 12px;
-    position: relative; 
-
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  padding: 12px;
+  position: relative;
 }
-.project-info{
-    position: absolute;
-    bottom: 12px;
-    left: 12px;
-    color: #fff;
-    bottom:0px;
-    background-color: rgba(0, 0, 1, 0.8);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    visibility: hidden;
+.project-info {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  color: #fff;
+  bottom: 0px;
+  background-color: rgba(0, 0, 1, 0.8);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
 }
 
 .github-project img {
-    filter: grayscale(10%); /* This rids our pictures of 75% of their color */
-    border-radius: 0%; /* Gives all images slightly rounded corners */
-    width: 100%; /* Ensures all images stay within the width of their container */
-    height: 100%; /* Sets the height of all images */
-    object-fit: cover;
+  filter: grayscale(10%); /* This rids our pictures of 75% of their color */
+  border-radius: 0%; /* Gives all images slightly rounded corners */
+  width: 100%; /* Ensures all images stay within the width of their container */
+  height: 100%; /* Sets the height of all images */
+  object-fit: cover;
 }
 .project-thumbnail {
-    max-width: 400px; /* Sets a fixed width for the project thumbnail */
-    height: 400px; /* Maintains aspect ratio */
-    background-color: #fff; /* Adds space between the thumbnail and the text */
-    border: 2px solid #fff; /* Adds a white border around the thumbnail */
-    overflow: hidden;
-    padding:5px;
+  max-width: 400px; /* Sets a fixed width for the project thumbnail */
+  height: 400px; /* Maintains aspect ratio */
+  background-color: #fff; /* Adds space between the thumbnail and the text */
+  border: 2px solid #fff; /* Adds a white border around the thumbnail */
+  overflow: hidden;
+  padding: 5px;
 }
 
 .github-project p {
-    color:#fff;
+  color: #fff;
 }
 
 .github-project:hover .project-info {
-    visibility: visible;
+  visibility: visible;
 }
 
 #Contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers the contact form */
-    padding: 20px;
-    /* background-color: #282727;  */
-    background-color: #fff; 
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
 }
-.contact-image{
-    display: block;
-    text-align: center;
-    
+.contact-image {
+  display: block;
+  text-align: center;
 }
 .contact-image img {
-    display: inline-block;
-    width: 30px; 
-    height: 30px; 
-    margin:0 6px;
-
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 6px;
 }
 
-.contact-container{
-    width: 100%;
-    background-color: #fff;
-    padding:10px 20px;
+.contact-container {
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 20px;
 }
 .contact-one {
-    /* background-color: #282727; */
-    background-color: #fff;
+  /* background-color: #282727; */
+  background-color: #fff;
 }
