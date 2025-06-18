@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Name Here</title>
     <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheet/animation.css" />
   </head>
 
   <body class="Background">
@@ -22,36 +23,41 @@
         </video>
 
         <div class="home-container">
-          <div class="avatar-container">
+          <div class="avatar-container exitanim">
             <img src="images/avatar.png" alt="Your avatar" />
           </div>
-          <h1 class="white-text">
-            Hello World!<span id="wave-emoji">👋</span>
-          </h1>
-          <p class="center">
-            <strong>
-              <q
-                >The computer programmer is a creator of universes for which he
-                alone is the lawgiver. <br />No playwright, no stage director,
-                no emperor, however powerful, has ever exercised such absolute
-                authority to arrange a stage or <br />field of battle and to
-                command such unswervingly dutiful actors or troops.
-              </q>
+          <div class="exitanim">
+            <h1 class="white-text">
+              Hello World!<span id="wave-emoji">👋</span>
+            </h1>
+          </div>
+          <div class="exitanim">
+            <p class="center">
+              <strong>
+                <q
+                  >The computer programmer is a creator of universes for which
+                  he alone is the lawgiver. <br />No playwright, no stage
+                  director, no emperor, however powerful, has ever exercised
+                  such absolute authority to arrange a stage or <br />field of
+                  battle and to command such unswervingly dutiful actors or
+                  troops.
+                </q>
+                <br />
+                -Joseph Weizenbaum
+              </strong>
               <br />
-              -Joseph Weizenbaum
-            </strong>
-            <br />
-            <br />
-            I'm Buddha. Welcome to my portfolio website. On it, I will tell you
-            about my background and experience.
-            <br />
-            <br />
-            Thank you for stopping by and enjoy!
-          </p>
-          <div class="button-container">
+              <br />
+              I'm Buddha. Welcome to my portfolio website. On it, I will tell
+              you about my background and experience.
+              <br />
+              <br />
+              Thank you for stopping by and enjoy!
+            </p>
+          </div>
+          <div class="button-container exitanim">
             <a href="#About" class="button"><strong>Learn More</strong></a>
           </div>
-          <div class="svg-dropdown">
+          <div class="svg-dropdown exitanim">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -98,8 +104,10 @@
       </section>
 
       <section id="About">
-        <h1>About</h1>
-        <div class="container about-container">
+        <div class="xaxis-entrance-animation">
+          <h1>About</h1>
+        </div>
+        <div class="container about-container entrance-animation">
           <p>
             I am a software developer who loves to code! As a father of two, I
             enjoy time with my family and traveling.
@@ -117,9 +125,11 @@
         </div>
 
         <div class="tech-stack-container">
-          <h1>Skills</h1>
+          <div class="xaxis-entrance-animation">
+            <h1>Skills</h1>
+          </div>
           <div class="tech-stack-images">
-            <div class="tech-stack-item">
+            <div class="tech-stack-item stagger-entrance-animation">
               <img
                 class="tech-logo"
                 src="images/icons/HTML5.png"
@@ -127,7 +137,7 @@
               />
               <p>HTML5</p>
             </div>
-            <div class="tech-stack-item">
+            <div class="tech-stack-item stagger-entrance-animation">
               <img
                 class="tech-logo"
                 src="images/icons/CSS3.png"
@@ -135,7 +145,7 @@
               />
               <p>CSS3</p>
             </div>
-            <div class="tech-stack-item">
+            <div class="tech-stack-item stagger-entrance-animation">
               <img
                 class="tech-logo"
                 src="images/icons/JavaScript.png"
@@ -143,7 +153,7 @@
               />
               <p>JavaScript</p>
             </div>
-            <div class="tech-stack-item">
+            <div class="tech-stack-item stagger-entrance-animation">
               <img
                 class="tech-logo"
                 src="images/icons/bootstrap.png"
@@ -151,7 +161,7 @@
               />
               <p>Bootstrap</p>
             </div>
-            <div class="tech-stack-item">
+            <div class="tech-stack-item stagger-entrance-animation">
               <img
                 class="tech-logo"
                 src="images/icons/Git.png"
@@ -159,9 +169,7 @@
               />
               <p>GIT</p>
             </div>
-          </div>
-          <div class="tech-stack-images">
-            <div class="tech-stack-item">
+            <div class="tech-stack-item stagger-entrance-animation">
               <img
                 class="tech-logo"
                 src="images/icons/Figma.png"
@@ -169,7 +177,7 @@
               />
               <p>Figma</p>
             </div>
-            <div class="tech-stack-item">
+            <div class="tech-stack-item stagger-entrance-animation">
               <img
                 class="tech-logo"
                 src="images/icons/MySQL.png"
@@ -178,13 +186,14 @@
               <p>MySQL</p>
             </div>
           </div>
+          <div class="tech-stack-images entrance-animation"></div>
         </div>
       </section>
 
       <section id="Projects" class="github-projects-container">
         <h1>Projects</h1>
         <div class="github-projects">
-          <article class="github-project">
+          <article class="github-project stagger-entrance-animation">
             <div class="project-thumbnail">
               <img
                 src="images/projects/rgames-ss.png"
@@ -207,7 +216,7 @@
               </div>
             </div>
           </article>
-          <article class="github-project">
+          <article class="github-project stagger-entrance-animation">
             <div class="project-thumbnail">
               <img
                 src="images/projects/dcare-ss.png"
@@ -225,7 +234,7 @@
               </div>
             </div>
           </article>
-          <article class="github-project">
+          <article class="github-project stagger-entrance-animation">
             <div class="project-thumbnail">
               <img
                 src="images/projects/icard-ss.png"

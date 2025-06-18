@@ -1,0 +1,146 @@
+/** animation **/
+@keyframes exitanim {
+  from {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+  0% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(10px) scale(0.8);
+  }
+  90% {
+    opacity: 0.5;
+    transform: translateY(20px) scale(0.7);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.6);
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+}
+.exitanim {
+  animation: exitanim linear;
+  animation-timeline: view();
+  animation-range: cover;
+  animation-duration: 1s;
+  transform-origin: 50% 50%;
+  /* animation-iteration-count: 1; */
+}
+
+@keyframes entranceanimation {
+  from {
+    transform: translateY(15px) scale(0);
+    filter: blur(3px);
+    opacity: 0;
+  }
+  0% {
+    opacity: 0;
+    transform: translateY(15px) scale(0);
+    filter: blur(3px);
+  }
+  10% {
+    opacity: 0.8;
+    transform: translateY(10px) scale(0.8);
+    filter: blur(2px);
+  }
+  20% {
+    opacity: 0.9;
+    transform: translateY(5px) scale(0.9);
+    filter: blur(1px);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+    filter: blur(0px);
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+.entrance-animation {
+  animation: entranceanimation linear;
+  animation-timeline: view();
+  animation-range: cover;
+  animation-duration: 1s;
+  transform-origin: 50% 50%;
+}
+
+@keyframes xaxis-entrance-animation {
+  from {
+    transform: translateX(-15px) scale(0);
+    filter: blur(5px);
+    opacity: 0;
+  }
+  0% {
+    opacity: 0;
+    transform: translateX(-15px) scale(0);
+    filter: blur(3px);
+  }
+  10% {
+    opacity: 0.8;
+    transform: translateX(-10px) scale(0.8);
+    filter: blur(2px);
+  }
+  20% {
+    opacity: 0.9;
+    transform: translateX(-5px) scale(0.9);
+    filter: blur(1px);
+  }
+  30% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+    filter: blur(0px);
+  }
+  to {
+    transform: translateX(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.xaxis-entrance-animation {
+  animation: xaxis-entrance-animation linear;
+  animation-timeline: view();
+  animation-range: cover;
+  animation-duration: 1s;
+  transform-origin: 50% 50%;
+}
+
+@keyframes stagger-entrance-animation {
+  from {
+    transform: translateX(100%);
+  }
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+    filter: blur(3px);
+  }
+  30% {
+    transform: translateX(0px);
+    opacity: 1;
+    filter: blur(0px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+.stagger-entrance-animation {
+  /* transform: translateX(-100%); */
+  animation: stagger-entrance-animation linear;
+  animation-timeline: view();
+  animation-range: cover;
+  animation-duration: 500ms;
+}

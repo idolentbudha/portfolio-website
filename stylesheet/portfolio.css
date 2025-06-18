@@ -226,7 +226,7 @@ footer {
   animation-name: wave;
   animation-duration: 3s;
   transform-origin: 70% 70%;
-  animation-iteration-count: 3;
+  animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
@@ -442,7 +442,7 @@ form {
   border-radius: 5px;
   height: 93%;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .tech-stack-container h1 {
   color: #fff;
