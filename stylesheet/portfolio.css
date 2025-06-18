@@ -268,6 +268,25 @@ footer {
   transition: transform 0.5s ease-in-out; /* This increases the size of the button when hovered over */
 }
 
+.svg-dropdown {
+  animation-name: arrowanim;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  transform-origin: 0% 0%;
+  position: absolute;
+  bottom: 5px;
+}
+
+@keyframes arrowanim {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(3px);
+  }
+}
+
 /* This animation effect causes the overlay video text to move up from the bottom of the page upon page load */
 @keyframes moveVideoText {
   from {
@@ -326,7 +345,7 @@ footer {
 
 /***** CONTACT FORM STYLING *****/
 /* input[type=text] targets all text input sections of the contact form */
-input[type="text"] {
+input.input-text {
   width: 100%; /* Each input box covers the full width of the container */
   padding: 12px; /* Adds padding within the text box */
   border: 1px solid #ccc; /* Setting a solid border and its color */
@@ -341,8 +360,22 @@ input[type="text"] {
 }
 
 /* Hover effects for input boxes */
-input[type="text"]:hover {
+input.input-text:hover {
   box-shadow: 0 0 5px #00004d inset; /* This creates a blue shadow in the text box when hovered over by the user */
+}
+
+textarea.input-textarea {
+  width: 100%; /* Each input box covers the full width of the container */
+  padding: 12px; /* Adds padding within the text box */
+  border: 1px solid #ccc; /* Setting a solid border and its color */
+  border-radius: 4px; /* Slightly rounds the corners of the text box border */
+  box-sizing: border-box; /* This creates a box with a border around the contact form input boxes */
+  margin-top: 6px; /* Adds a margin to the top of the text box */
+  margin-bottom: 16px; /* Adds a margin to the bottom of the text box */
+  resize: vertical; /* This allows the user to resize the text boxes vertically */
+  font-family:
+    Perpetua,
+    Rockwell Extra Bold;
 }
 
 /* Submit button */
@@ -455,15 +488,17 @@ form {
 }
 
 /** Github Projects */
+#Projects {
+  padding: 5vw 10vw;
+  background-color: #3c3e42;
+}
+
 .github-projects-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers the projects container */
+  align-items: center;
   max-width: 100%;
   margin: 0 auto;
-  padding: 30px;
-  background-color: #3c3e42;
-  /* background-color: #ffd583; */
 }
 
 .github-projects-container h1 {
@@ -474,6 +509,7 @@ form {
   flex-direction: row;
   gap: 16px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .github-project {
