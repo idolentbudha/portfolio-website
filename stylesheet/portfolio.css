@@ -414,7 +414,7 @@ form {
 
 /***ABOUTUS SECTION - TECHSTACK STYLING ***/
 #About {
-  min-height: 100vh;
+  min-height: 100vmin;
   background-color: #282727;
   padding: 5vw 10vw;
 }
@@ -486,6 +486,32 @@ form {
   height: auto; /* Maintains aspect ratio */ /* Adds space between the logo and the text */
   padding: 2px; /* Adds padding around the logo */
 }
+
+.github-banner-container {
+  margin-top: 10vmin;
+  width: 85%;
+}
+.github-banner {
+  background-color: #4e4a4a;
+  padding: 10px;
+  border-radius: 15px;
+  margin: auto 0px;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.arrow-svg {
+  transform: rotate(270deg);
+}
+.github-banner-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/* .github-banner-logo {
+  margin: auto 0px;
+} */
 
 /** Github Projects */
 #Projects {

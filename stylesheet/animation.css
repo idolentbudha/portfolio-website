@@ -118,10 +118,10 @@
 
 @keyframes stagger-entrance-animation {
   from {
-    transform: translateX(100%);
+    transform: translateX(50%);
   }
   0% {
-    transform: translateX(100%);
+    transform: translateX(50%);
     opacity: 0;
     filter: blur(3px);
   }
