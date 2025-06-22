@@ -354,9 +354,6 @@ input.input-text {
   margin-top: 6px; /* Adds a margin to the top of the text box */
   margin-bottom: 16px; /* Adds a margin to the bottom of the text box */
   resize: vertical; /* This allows the user to resize the text boxes vertically */
-  font-family:
-    Perpetua,
-    Rockwell Extra Bold;
 }
 
 /* Hover effects for input boxes */
