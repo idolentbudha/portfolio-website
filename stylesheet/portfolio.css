@@ -387,16 +387,13 @@ input[type="submit"] {
   display: block; /* Allows the submit button to be centered */
   margin-left: auto; /* In combination with "margin-right: auto" this will center the submit button */
   margin-right: auto;
-  font-family:
-    Perpetua,
-    Rockwell Extra Bold;
 }
 
 /* Hover effect for submit button */
 input[type="submit"]:hover {
-  background-color: white; /* Turns the background of the submit button white when the user hovers over it */
+  background-color: #fff;
   color: black; /* Turns the font black when hovered over */
-  transform: scale(1.5); /* Makes the button increase 1.5 times in size */
+  transform: scale(1); /* Makes the button increase 1.5 times in size */
   transition: transform 1.5s; /* Makes the transform effect last 1.5 seconds */
 }
 
@@ -405,7 +402,6 @@ form {
   border-radius: 5px; /* Rounds the corners of the contact form */
   background-color: #f2f2f2;
   padding: 30px; /* Adds padding to the contact form */
-  font-family: "Trebuchet MS", Optima;
 }
 /***** END OF CONTACT FORM STYLING *****/
 
@@ -490,13 +486,28 @@ form {
 }
 .github-banner {
   background-color: #4e4a4a;
-  padding: 10px;
+  padding: 20px;
   border-radius: 15px;
   margin: auto 0px;
   color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.github-banner a {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.github-banner:hover {
+  transform: scale(1.015);
+}
+
+.github-banner p {
+  padding: 0px;
 }
 .arrow-svg {
   transform: rotate(270deg);
@@ -594,6 +605,7 @@ form {
 }
 .contact-image img {
   display: inline-block;
+  filter: grayscale(0.4);
   width: 30px;
   height: 30px;
   margin: 0 6px;
@@ -605,6 +617,5 @@ form {
   padding: 10px 20px;
 }
 .contact-one {
-  /* background-color: #282727; */
   background-color: #fff;
 }
