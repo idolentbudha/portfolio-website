@@ -25,13 +25,17 @@
     opacity: 0;
   }
 }
-.exitanim {
-  animation: exitanim linear;
-  animation-timeline: view();
-  animation-range: cover;
-  animation-duration: 1s;
-  transform-origin: 50% 50%;
-  /* animation-iteration-count: 1; */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .exitanim {
+      animation: exitanim linear;
+      animation-timeline: view();
+      animation-range: cover;
+      animation-duration: 1s;
+      transform-origin: 50% 50%;
+      /* animation-iteration-count: 1; */
+    }
+  }
 }
 
 @keyframes entranceanimation {
@@ -67,12 +71,16 @@
   }
 }
 
-.entrance-animation {
-  animation: entranceanimation linear;
-  animation-timeline: view();
-  animation-range: cover;
-  animation-duration: 1s;
-  transform-origin: 50% 50%;
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .entrance-animation {
+      animation: entranceanimation linear;
+      animation-timeline: view();
+      animation-range: cover;
+      animation-duration: 1s;
+      transform-origin: 50% 50%;
+    }
+  }
 }
 
 @keyframes xaxis-entrance-animation {
@@ -107,13 +115,16 @@
     opacity: 1;
   }
 }
-
-.xaxis-entrance-animation {
-  animation: xaxis-entrance-animation linear;
-  animation-timeline: view();
-  animation-range: cover;
-  animation-duration: 1s;
-  transform-origin: 50% 50%;
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .xaxis-entrance-animation {
+      animation: xaxis-entrance-animation linear;
+      animation-timeline: view();
+      animation-range: cover;
+      animation-duration: 1s;
+      transform-origin: 50% 50%;
+    }
+  }
 }
 
 @keyframes slide-from-right-entrance-animation {
@@ -136,11 +147,14 @@
     filter: blur(0px);
   }
 }
-
-.slide-from-right-entrance-animation {
-  /* transform: translateX(-100%); */
-  animation: slide-from-right-entrance-animation linear;
-  animation-timeline: view();
-  animation-range: cover;
-  animation-duration: 500ms;
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .slide-from-right-entrance-animation {
+      /* transform: translateX(-100%); */
+      animation: slide-from-right-entrance-animation linear;
+      animation-timeline: view();
+      animation-range: cover;
+      animation-duration: 500ms;
+    }
+  }
 }
