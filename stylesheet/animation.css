@@ -116,12 +116,12 @@
   transform-origin: 50% 50%;
 }
 
-@keyframes stagger-entrance-animation {
+@keyframes slide-from-right-entrance-animation {
   from {
-    transform: translateX(50%);
+    transform: translateX(10%);
   }
   0% {
-    transform: translateX(50%);
+    transform: translateX(10%);
     opacity: 0;
     filter: blur(3px);
   }
@@ -137,9 +137,9 @@
   }
 }
 
-.stagger-entrance-animation {
+.slide-from-right-entrance-animation {
   /* transform: translateX(-100%); */
-  animation: stagger-entrance-animation linear;
+  animation: slide-from-right-entrance-animation linear;
   animation-timeline: view();
   animation-range: cover;
   animation-duration: 500ms;
