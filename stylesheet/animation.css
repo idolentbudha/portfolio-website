@@ -33,7 +33,6 @@
       animation-range: cover;
       animation-duration: 1s;
       transform-origin: 50% 50%;
-      /* animation-iteration-count: 1; */
     }
   }
 }
