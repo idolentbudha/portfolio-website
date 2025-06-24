@@ -57,7 +57,11 @@ img:hover {
 }
 footer {
   padding: 2%;
-  background-color: white;
+  background-color: black;
+}
+
+footer p {
+  color: #fff;
 }
 
 /* ====== NAVBAR ====== */
@@ -264,7 +268,7 @@ input[type="submit"]:hover {
   transition: transform 1.5s;
 }
 form {
-  border-radius: 5px;
+  border-radius: 15px;
   background-color: #f2f2f2;
   padding: 30px;
 }
@@ -275,6 +279,12 @@ form {
   background-color: #282727;
   padding: 5vw 10vw;
 }
+@media (min-width: 1080px) {
+  #About {
+    padding: 5vw 20vw;
+  }
+}
+
 #About h1 {
   color: #fff;
 }
@@ -384,6 +394,11 @@ form {
   padding: 5vw 10vw;
   background-color: #3c3e42;
 }
+@media (min-width: 1080px) {
+  #Projects {
+    padding: 5vw 20vw;
+  }
+}
 .github-projects-container {
   display: flex;
   flex-direction: column;
@@ -452,7 +467,7 @@ form {
 }
 @media (min-width: 1080px) {
   #Contact {
-    padding: 5vw 10vw;
+    padding: 5vw 20vw;
   }
 }
 .contact-image {
@@ -462,15 +477,9 @@ form {
 .contact-image img {
   display: inline-block;
   filter: grayscale(0.4);
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   margin: 0 6px;
-}
-@media (max-width: 576px) {
-  .contact-image img {
-    width: 25px;
-    height: 25px;
-  }
 }
 .contact-container {
   width: 100%;
@@ -478,7 +487,7 @@ form {
   padding: 10px 20px;
 }
 .contact-one {
-  background-color: #fff;
+  background-color: black;
 }
 
 /* ====== RESPONSIVE BREAKPOINTS ====== */
