@@ -125,6 +125,13 @@ footer {
   align-items: center;
 }
 
+.home-container h1 {
+  text-transform: uppercase;
+  font-family: "Telefon Black", Sans-Serif;
+  margin-top: 3%;
+  font-size: clamp(2rem, 5vw + 1rem, 5rem);
+}
+
 /* ====== VIDEO ====== */
 #Typing_Video {
   position: fixed;
@@ -132,11 +139,6 @@ footer {
   top: 0;
   min-width: 100%;
   z-index: -1;
-}
-@media screen and (max-width: 576px) {
-  #Typing_Video {
-    display: none;
-  }
 }
 
 /* ====== AVATAR ====== */
@@ -206,14 +208,14 @@ footer {
   animation: arrowanim 1s ease-out infinite;
   transform-origin: 0% 0%;
   position: absolute;
-  bottom: 5px;
+  bottom: 10px;
 }
 @keyframes arrowanim {
   0% {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(3px);
+    transform: translateY(5px);
   }
 }
 @keyframes moveVideoText {
@@ -274,14 +276,11 @@ textarea.input-textarea {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 input.input-text:hover {
   box-shadow: 0 0 5px #00004d inset;
-}
-textarea.input-textarea {
-  font-family:
-    Perpetua,
-    Rockwell Extra Bold;
 }
 input[type="submit"] {
   background-color: black;
@@ -480,6 +479,12 @@ form {
   align-items: center;
   padding: 20px;
   background-color: #fff;
+  padding: 5vw 4vw;
+}
+@media (min-width: 1080px) {
+  #Contact {
+    padding: 5vw 10vw;
+  }
 }
 .contact-image {
   display: block;
@@ -491,6 +496,12 @@ form {
   width: 30px;
   height: 30px;
   margin: 0 6px;
+}
+@media (max-width: 576px) {
+  .contact-image img {
+    width: 25px;
+    height: 25px;
+  }
 }
 .contact-container {
   width: 100%;
@@ -515,7 +526,7 @@ form {
 @media (max-width: 768px) {
   .tech-stack-images,
   .github-projects {
-    flex-direction: column;
+    flex-direction: row;
     gap: 16px;
   }
   .project-thumbnail {
@@ -530,15 +541,5 @@ form {
   }
   .avatar-container img {
     max-height: 150px;
-  }
-  .Column_1,
-  .Column_2 {
-    width: 100%;
-    float: none;
-    height: auto;
-    overflow: auto;
-  }
-  #Typing_Video {
-    display: none;
   }
 }
