@@ -48,6 +48,13 @@
         --border-radius-full: 9999px;
       }
 
+      [data-theme='light'] {
+        --color-text: #212529;
+        --color-background: #ffffff;
+        --color-light: #343a40;
+        --color-dark: #f8f9fa;
+      }
+
       html {
         scroll-behavior: smooth;
       }
@@ -59,7 +66,10 @@
         color: var(--color-text);
         background-color: var(--color-background);
         padding: 0 var(--spacing-xxl);
+        transition: background-color 0.5s ease;
       }
+
+      
 
       nav {
         display: flex;
@@ -95,7 +105,7 @@
         color: var(--color-success);
       }
 
-      .dark-mode {
+      .dark-mode-btn {
         background: none;
         border: 1px solid var(--color-light);
         border-radius: var(--border-radius-full);
@@ -105,8 +115,8 @@
         transition: background-color 0.3s ease, color 0.3s ease;
       }
 
-      .dark-mode:hover,
-      .dark-mode:focus {
+      .dark-mode-btn:hover,
+      .dark-mode-btn:focus {
         background-color: var(--color-light);
         color: var(--color-dark);
       }
@@ -121,7 +131,7 @@
         <li><a href="#Projects" title="Go to Projects section">Projects</a></li>
         <li><a href="#Contact" title="Go to Contact section">Contact</a></li>
       </ul>
-      <button class="dark-mode" aria-label="Toggle dark mode">S</button>
+      <button class="dark-mode-btn" aria-label="Toggle dark mode">S</button>
     </nav>
     <main>
       <section id="Home">
@@ -139,5 +149,25 @@
       <section id="Projects"></section>
       <section id="Contact"></section>
     </main>
+</main>
+    <script>
+      const toggleBtn = document.querySelector('.dark-mode-btn');
+      const currentTheme = localStorage.getItem('theme');
+
+      if (currentTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+
+      toggleBtn.addEventListener('click', () => {
+        const theme = document.documentElement.getAttribute('data-theme');
+        if (theme === 'light') {
+          document.documentElement.removeAttribute('data-theme');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    </script>
   </body>
 </html>
