@@ -3,14 +3,118 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio website of Buddha Lama, showcasing skills, projects, and contact details." />
+    <meta
+      name="description"
+      content="Portfolio website of Buddha Lama, showcasing skills, projects, and contact details."
+    />
     <link rel="stylesheet" type="text/css" href="stylesheet/v2/style.css" />
     <title>Me</title>
+    <style>
+      :root {
+        /*colors*/
+        --color-primary: #s;
+        --color-secondary: #6c757d;
+        --color-success: #28a745;
+        --color-danger: #dc3545;
+        --color-light: #f8f9fa;
+        --color-dark: #343a40;
+        /* --color-text: #212529; */
+        --color-text: #f8f9fa;
+        --color-background: #0e0f11;
+        --color-border: #dee2e6;
+
+        /* Typography */
+        --font-family-base: "Inter", sans-serif;
+        --font-size-base: 1rem; /* 16px */
+        --font-size-sm: 0.875rem; /* 14px */
+        --font-size-lg: 1.25rem; /* 20px */
+        --line-height-base: 1.5;
+        --heading-font-weight: 700;
+        --body-font-weight: 400;
+
+        /* Spacing */
+        --spacing-xxs: 0.25rem; /* 4px */
+        --spacing-xs: 0.5rem; /* 8px */
+        --spacing-sm: 0.75rem; /* 12px */
+        --spacing-md: 1rem; /* 16px */
+        --spacing-lg: 1.5rem; /* 24px */
+        --spacing-xl: 2rem; /* 32px */
+        --spacing-xxl: 3rem; /* 48px */
+
+        /* Border Radius */
+        --border-radius-sm: 0.25rem;
+        --border-radius-md: 0.5rem;
+        --border-radius-lg: 0.75rem;
+        --border-radius-full: 9999px;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--font-family-base);
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-base);
+        color: var(--color-text);
+        background-color: var(--color-background);
+        padding: 0 var(--spacing-xxl);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--spacing-md) 0;
+      }
+
+      nav header {
+        font-size: var(--font-size-lg);
+        font-weight: var(--body-font-weight);
+        margin: 0;
+        color: var(--color-light);
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: var(--spacing-md);
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: var(--color-light);
+        font-weight: var(--body-font-weight);
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover,
+      nav ul li a:focus {
+        color: var(--color-success);
+      }
+
+      .dark-mode {
+        background: none;
+        border: 1px solid var(--color-light);
+        border-radius: var(--border-radius-full);
+        padding: var(--spacing-xs) var(--spacing-sm);
+        color: var(--color-light);
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .dark-mode:hover,
+      .dark-mode:focus {
+        background-color: var(--color-light);
+        color: var(--color-dark);
+      }
+    </style>
   </head>
   <body>
-    <a href="#Home" class="skip-link">Skip to main content</a>
     <nav>
-      <h1>Buddha Lama</h1>
+      <header>Buddha Lama</header>
       <ul>
         <li><a href="#Home" title="Go to Home section">Home</a></li>
         <li><a href="#About" title="Go to About section">About</a></li>
@@ -21,7 +125,10 @@
     </nav>
     <main>
       <section id="Home">
-        <h2 class="white-text">Hello World! <span id="wave-emoji" role="img" aria-label="waving hand">👋</span></h2>
+        <h2 class="white-text">
+          Hello World!
+          <span id="wave-emoji" role="img" aria-label="waving hand">👋</span>
+        </h2>
         <p>
           I'm Buddha. Welcome to my portfolio website. On it, I will tell you
           about my background and experience.
