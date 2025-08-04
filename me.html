@@ -15,9 +15,22 @@
     <title>Me</title>
     <script>
       function collaspseTechCard(element) {
-        const techItems = element.getElementsByClassName("tech-items")[0];
-        techItems.classList.toggle("collapse-anim");
-        element.classList.toggle("collapse-anim");
+        const techType = element.getAttribute("data-stack");
+
+        const techCards = document.getElementsByClassName("tech-card");
+
+        for (let i = 0; i < techCards.length; i++) {
+          if (techCards[i].getAttribute("data-stack") !== techType) {
+            techCards[i].classList.remove("active");
+            techCards[i]
+              .getElementsByClassName("tech-items-container")[0]
+              .classList.remove("active");
+          }
+        }
+        element
+          .getElementsByClassName("tech-items-container")[0]
+          .classList.add("active");
+        element.classList.add("active");
       }
     </script>
   </head>
@@ -56,41 +69,6 @@
       <section id="About">
         <div class="about-div-container">
           <div
-            data-stack="web"
-            class="tech-card card"
-            onclick="collaspseTechCard(this)"
-          >
-            <div class="techheader-div-container">
-              <h2 class="techcard-header">
-                Web
-                <i class="fa-solid fa-layer-group"></i>
-              </h2>
-            </div>
-
-            <div class="tech-items">
-              <img
-                src="images/icons/HTML5.png"
-                alt="HTML5 Logo"
-                class="tech-logo"
-              />
-              <img
-                src="images/icons/CSS3.png"
-                alt="CSS3 Logo"
-                class="tech-logo"
-              />
-              <img
-                src="images/icons/JavaScript.png"
-                alt="JavaScript Logo"
-                class="tech-logo"
-              />
-              <img
-                src="images/icons/bootstrap.png"
-                alt="Bootstrap Logo"
-                class="tech-logo"
-              />
-            </div>
-          </div>
-          <div
             data-stack="mobile"
             class="tech-card card"
             onclick="collaspseTechCard(this)"
@@ -98,31 +76,33 @@
             <div class="techheader-div-container">
               <h2 class="techcard-header">
                 Mobile
-                <i class="fa-solid fa-layer-group"></i>
+                <i class="fa-solid fa-mobile-screen-button"></i>
               </h2>
             </div>
-
-            <div class="tech-items">
-              <img
-                src="images/icons/HTML5.png"
-                alt="HTML5 Logo"
-                class="tech-logo"
-              />
-              <img
-                src="images/icons/CSS3.png"
-                alt="CSS3 Logo"
-                class="tech-logo"
-              />
-              <img
-                src="images/icons/JavaScript.png"
-                alt="JavaScript Logo"
-                class="tech-logo"
-              />
-              <img
-                src="images/icons/bootstrap.png"
-                alt="Bootstrap Logo"
-                class="tech-logo"
-              />
+            <div class="tech-items-container">
+              <p>lskjdla asdlkajsdf asdlfkdjsf asdlfkjsadf</p>
+              <div class="tech-items">
+                <img
+                  src="images/icons/HTML5.png"
+                  alt="HTML5 Logo"
+                  class="tech-logo"
+                />
+                <img
+                  src="images/icons/CSS3.png"
+                  alt="CSS3 Logo"
+                  class="tech-logo"
+                />
+                <img
+                  src="images/icons/JavaScript.png"
+                  alt="JavaScript Logo"
+                  class="tech-logo"
+                />
+                <img
+                  src="images/icons/bootstrap.png"
+                  alt="Bootstrap Logo"
+                  class="tech-logo"
+                />
+              </div>
             </div>
           </div>
           <div
@@ -133,11 +113,50 @@
             <div class="techheader-div-container">
               <h2 class="techcard-header">
                 Cloud
-                <i class="fa-solid fa-layer-group"></i>
+                <i class="fa-regular fa-cloud"></i>
               </h2>
             </div>
-
-            <div class="tech-items"></div>
+            <div class="tech-items-container">
+              <p>lskjdla asdlkajsdf asdlfkdjsf asdlfkjsadf</p>
+              <div class="tech-items"></div>
+            </div>
+          </div>
+          <div
+            data-stack="web"
+            class="tech-card card active"
+            onclick="collaspseTechCard(this)"
+          >
+            <div class="techheader-div-container">
+              <h2 class="techcard-header">
+                Web
+                <i class="fa-solid fa-earth-americas"></i>
+              </h2>
+            </div>
+            <div class="tech-items-container active">
+              <p>lskjdla asdlkajsdf asdlfkdjsf asdlfkjsadf</p>
+              <div class="tech-items">
+                <img
+                  src="images/icons/HTML5.png"
+                  alt="HTML5 Logo"
+                  class="tech-logo"
+                />
+                <img
+                  src="images/icons/CSS3.png"
+                  alt="CSS3 Logo"
+                  class="tech-logo"
+                />
+                <img
+                  src="images/icons/JavaScript.png"
+                  alt="JavaScript Logo"
+                  class="tech-logo"
+                />
+                <img
+                  src="images/icons/bootstrap.png"
+                  alt="Bootstrap Logo"
+                  class="tech-logo"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -177,55 +177,52 @@ nav ul li a:focus {
 }
 
 .about-div-container {
-  position: relative;
   min-height: var(--spacing-150);
   display: flex;
   flex-direction: row;
+  gap: var(--spacing-lg);
 }
 .tech-card {
-  width: 60%;
+  width: 10%;
   height: 100%;
   border: #0e0f11 1px solid;
   display: flex;
   flex-direction: row;
   align-items: center;
-  transition: width 0.3s ease-in-out;
+  transition: width 0.5s linear;
   padding: var(--spacing-lg);
+  position: relative;
 }
 
-.tech-card:nth-child(2) {
-  width: 10%;
-}
-.tech-card:nth-child(3) {
-  width: 10%;
-}
-.tech-card.collapse-anim {
-  width: 7%;
+.tech-card.active {
+  width: 60%;
   transition: width 0.5s ease-in-out;
 }
 
 .techheader-div-container {
   width: 10%;
+  text-align: center;
 }
 .techcard-header {
   cursor: pointer;
   writing-mode: vertical-rl;
   text-orientation: upright;
 }
-
+.tech-items-container {
+  padding: var(--spacing-lg);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
 .tech-items {
   width: 90%;
   display: flex;
   flex-direction: row;
   gap: var(--spacing-md);
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
 }
 
-.tech-items.collapse-anim {
-  opacity: 0;
-  width: 10px;
-  transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out;
+.tech-items-container.active {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .stack-div-card {
