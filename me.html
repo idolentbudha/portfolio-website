@@ -7,10 +7,19 @@
       name="description"
       content="Portfolio website of Buddha Lama, showcasing skills, projects, and contact details."
     />
+    <script
+      src="https://kit.fontawesome.com/1fe592cdea.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" type="text/css" href="stylesheet/v2/style.css" />
-    
     <title>Me</title>
-    
+    <script>
+      function collaspseTechCard(element) {
+        const techItems = element.getElementsByClassName("tech-items")[0];
+        techItems.classList.toggle("collapse-anim");
+        element.classList.toggle("collapse-anim");
+      }
+    </script>
   </head>
   <body>
     <nav>
@@ -26,11 +35,13 @@
     <main>
       <section id="Home">
         <p class="homeheader-p bold">
-          <br>
-          I'm Buddha.<span id="wave-emoji" role="img" aria-label="waving hand">👋</span>
-          <br>
+          <br />
+          I'm Buddha.<span id="wave-emoji" role="img" aria-label="waving hand"
+            >👋</span
+          >
+          <br />
           Fullstack Developer, crafting solutions for 5+ years.
-          <br>
+          <br />
           Welcome to my portfolio website.
         </p>
         <div class="social-icons">
@@ -43,59 +54,142 @@
         </div>
       </section>
       <section id="About">
-        <div class="tech-stack" >
-          <img
-                class="tech-logo"
+        <div class="about-div-container">
+          <div
+            data-stack="web"
+            class="tech-card card"
+            onclick="collaspseTechCard(this)"
+          >
+            <div class="techheader-div-container">
+              <h2 class="techcard-header">
+                Web
+                <i class="fa-solid fa-layer-group"></i>
+              </h2>
+            </div>
+
+            <div class="tech-items">
+              <img
                 src="images/icons/HTML5.png"
                 alt="HTML5 Logo"
+                class="tech-logo"
               />
               <img
-                class="tech-logo"
                 src="images/icons/CSS3.png"
                 alt="CSS3 Logo"
+                class="tech-logo"
               />
               <img
-                class="tech-logo"
                 src="images/icons/JavaScript.png"
                 alt="JavaScript Logo"
+                class="tech-logo"
               />
               <img
-                class="tech-logo"
                 src="images/icons/bootstrap.png"
                 alt="Bootstrap Logo"
+                class="tech-logo"
+              />
+            </div>
+          </div>
+          <div
+            data-stack="mobile"
+            class="tech-card card"
+            onclick="collaspseTechCard(this)"
+          >
+            <div class="techheader-div-container">
+              <h2 class="techcard-header">
+                Mobile
+                <i class="fa-solid fa-layer-group"></i>
+              </h2>
+            </div>
+
+            <div class="tech-items">
+              <img
+                src="images/icons/HTML5.png"
+                alt="HTML5 Logo"
+                class="tech-logo"
               />
               <img
+                src="images/icons/CSS3.png"
+                alt="CSS3 Logo"
                 class="tech-logo"
-                src="images/icons/Figma.png"
-                alt="Figma Logo"
               />
               <img
+                src="images/icons/JavaScript.png"
+                alt="JavaScript Logo"
                 class="tech-logo"
-                src="images/icons/MySQL.png"
-                alt="MySQL Logo"
               />
+              <img
+                src="images/icons/bootstrap.png"
+                alt="Bootstrap Logo"
+                class="tech-logo"
+              />
+            </div>
+          </div>
+          <div
+            data-stack="cloud"
+            class="tech-card card"
+            onclick="collaspseTechCard(this)"
+          >
+            <div class="techheader-div-container">
+              <h2 class="techcard-header">
+                Cloud
+                <i class="fa-solid fa-layer-group"></i>
+              </h2>
+            </div>
+
+            <div class="tech-items"></div>
+          </div>
         </div>
       </section>
-      <section id="Projects"></section>
+      <section id="Projects">
+        <!-- <h3><i class="fa-solid fa-briefcase"></i>&nbsp; Projects</h3> -->
+        <div class="project-container card">
+          <button class="carousel-btn carousel-btn-prev">
+            <img src="images/prev.svg" alt="Previous Button" />
+          </button>
+          <button class="carousel-btn carousel-btn-next">
+            <img src="images/next.svg" alt="Next Button" />
+          </button>
+          <div class="projectimg-container">
+            <div class="projectimg-div">
+              <img
+                src="images/projects/v2/danphecare-ss.jpg"
+                alt="Screenshot of D-Care project"
+              />
+            </div>
+            <div class="projectimg-div">
+              <img
+                src="images/projects/v2/icard-ss.jpg"
+                alt="Screenshot of I-Card project"
+              />
+            </div>
+            <div class="projectimg-div">
+              <img
+                src="images/projects/v2/ramailogames-ss.jpg"
+                alt="Screenshot of RGames project"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="Contact"></section>
     </main>
-</main>
     <script>
-      const toggleBtn = document.querySelector('.dark-mode-btn');
-      const currentTheme = localStorage.getItem('theme');
+      const toggleBtn = document.querySelector(".dark-mode-btn");
+      const currentTheme = localStorage.getItem("theme");
 
-      if (currentTheme === 'light') {
-        document.documentElement.setAttribute('data-theme', 'light');
+      if (currentTheme === "light") {
+        document.documentElement.setAttribute("data-theme", "light");
       }
 
-      toggleBtn.addEventListener('click', () => {
-        const theme = document.documentElement.getAttribute('data-theme');
-        if (theme === 'light') {
-          document.documentElement.removeAttribute('data-theme');
-          localStorage.setItem('theme', 'dark');
+      toggleBtn.addEventListener("click", () => {
+        const theme = document.documentElement.getAttribute("data-theme");
+        if (theme === "light") {
+          document.documentElement.removeAttribute("data-theme");
+          localStorage.setItem("theme", "dark");
         } else {
-          document.documentElement.setAttribute('data-theme', 'light');
-          localStorage.setItem('theme', 'light');
+          document.documentElement.setAttribute("data-theme", "light");
+          localStorage.setItem("theme", "light");
         }
       });
     </script>
