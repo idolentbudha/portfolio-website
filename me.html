@@ -43,7 +43,9 @@
         <li><a href="#Projects" title="Go to Projects section">Projects</a></li>
         <li><a href="#Contact" title="Go to Contact section">Contact</a></li>
       </ul>
-      <button class="dark-mode-btn" aria-label="Toggle dark mode">S</button>
+      <button class="dark-mode-btn" aria-label="Toggle dark mode">
+        <i class="fa-regular fa-lightbulb"></i>
+      </button>
     </nav>
     <main>
       <section id="Home">
@@ -57,30 +59,33 @@
           <br />
           Welcome to my portfolio website.
         </p>
-        <div class="social-icons">
-          <a href="https://www.instagram.com/idolentbudha/">
-            <img src="images/icons/GitHub.png" alt="Github icon" />
-          </a>
-          <a href="https://www.linkedin.com/in/lamabuddha/">
-            <img src="images/icons/LinkedIn.png" alt="LinkedIn icon" />
-          </a>
+        <div class="home-subheader-container">
+          <div>
+            <i class="fa-solid fa-briefcase"></i>
+            <p><strong>Recent Experience</strong></p>
+            <p>Web developer @ The Tech Academy</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-location-dot"></i>
+            <p><strong>Location</strong></p>
+            <p>London, UK</p>
+          </div>
         </div>
       </section>
       <section id="About">
+        <h2>SKILLS</h2>
         <div class="about-div-container">
           <div
             data-stack="mobile"
-            class="tech-card card"
+            class="card tech-card"
             onclick="collaspseTechCard(this)"
           >
             <div class="techheader-div-container">
               <h2 class="techcard-header">
-                Mobile
                 <i class="fa-solid fa-mobile-screen-button"></i>
               </h2>
             </div>
             <div class="tech-items-container">
-              <p>lskjdla asdlkajsdf asdlfkdjsf asdlfkjsadf</p>
               <div class="tech-items">
                 <img
                   src="images/icons/HTML5.png"
@@ -107,33 +112,50 @@
           </div>
           <div
             data-stack="cloud"
-            class="tech-card card"
+            class="card tech-card"
             onclick="collaspseTechCard(this)"
           >
             <div class="techheader-div-container">
               <h2 class="techcard-header">
-                Cloud
                 <i class="fa-regular fa-cloud"></i>
               </h2>
             </div>
             <div class="tech-items-container">
-              <p>lskjdla asdlkajsdf asdlfkdjsf asdlfkjsadf</p>
-              <div class="tech-items"></div>
+              <div class="tech-items">
+                <img
+                  src="images/icons/HTML5.png"
+                  alt="HTML5 Logo"
+                  class="tech-logo"
+                />
+                <img
+                  src="images/icons/CSS3.png"
+                  alt="CSS3 Logo"
+                  class="tech-logo"
+                />
+                <img
+                  src="images/icons/JavaScript.png"
+                  alt="JavaScript Logo"
+                  class="tech-logo"
+                />
+                <img
+                  src="images/icons/bootstrap.png"
+                  alt="Bootstrap Logo"
+                  class="tech-logo"
+                />
+              </div>
             </div>
           </div>
           <div
             data-stack="web"
-            class="tech-card card active"
+            class="card tech-card active"
             onclick="collaspseTechCard(this)"
           >
             <div class="techheader-div-container">
               <h2 class="techcard-header">
-                Web
                 <i class="fa-solid fa-earth-americas"></i>
               </h2>
             </div>
             <div class="tech-items-container active">
-              <p>lskjdla asdlkajsdf asdlfkdjsf asdlfkjsadf</p>
               <div class="tech-items">
                 <img
                   src="images/icons/HTML5.png"
@@ -163,14 +185,14 @@
       <section id="Projects">
         <!-- <h3><i class="fa-solid fa-briefcase"></i>&nbsp; Projects</h3> -->
         <div class="project-container card">
-          <button class="carousel-btn carousel-btn-prev">
+          <button onclick="prevSlide()" class="carousel-btn carousel-btn-prev">
             <img src="images/prev.svg" alt="Previous Button" />
           </button>
-          <button class="carousel-btn carousel-btn-next">
+          <button onclick="nextSlide()" class="carousel-btn carousel-btn-next">
             <img src="images/next.svg" alt="Next Button" />
           </button>
           <div class="projectimg-container">
-            <div class="projectimg-div">
+            <div class="projectimg-div active">
               <img
                 src="images/projects/v2/danphecare-ss.jpg"
                 alt="Screenshot of D-Care project"
@@ -191,7 +213,16 @@
           </div>
         </div>
       </section>
-      <section id="Contact"></section>
+      <section id="Contact">
+        <div class="social-icons">
+          <a href="https://www.instagram.com/idolentbudha/">
+            <img src="images/icons/GitHub.png" alt="Github icon" />
+          </a>
+          <a href="https://www.linkedin.com/in/lamabuddha/">
+            <img src="images/icons/LinkedIn.png" alt="LinkedIn icon" />
+          </a>
+        </div>
+      </section>
     </main>
     <script>
       const toggleBtn = document.querySelector(".dark-mode-btn");
@@ -211,6 +242,32 @@
           localStorage.setItem("theme", "light");
         }
       });
+
+      let currentIndex = 0;
+      const slides = document.querySelectorAll(".projectimg-div");
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          if (i == index) {
+            slide.classList.add("active");
+          } else {
+            slide.classList.remove("active");
+          }
+        });
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+      }
+
+      // Show the first slide on load
+      showSlide(currentIndex);
     </script>
   </body>
 </html>
