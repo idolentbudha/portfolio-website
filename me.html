@@ -35,40 +35,80 @@
     </script>
   </head>
   <body>
-    <nav>
-      <p class="upper-case">Buddha Lama</p>
+    <nav id="Nav">
+      <p class="upper-case soft">Buddha Lama</p>
       <ul>
         <li><a href="#Home" title="Go to Home section">Home</a></li>
         <li><a href="#About" title="Go to About section">About</a></li>
         <li><a href="#Projects" title="Go to Projects section">Projects</a></li>
-        <li><a href="#Contact" title="Go to Contact section">Contact</a></li>
       </ul>
-      <button class="dark-mode-btn" aria-label="Toggle dark mode">
-        <i class="fa-regular fa-lightbulb"></i>
-      </button>
+      <div class="nav-quicklink-container">
+        <button class="nav-btn" aria-label="Toggle dark mode">
+          <i class="fa-brands fa-linkedin"></i>
+        </button>
+        <button class="nav-btn" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-envelope"></i>
+        </button>
+        <button class="dark-mode-btn" aria-label="Toggle dark mode">
+          <i class="fa-regular fa-lightbulb"></i>
+        </button>
+      </div>
     </nav>
     <main>
       <section id="Home">
-        <p class="homeheader-p bold">
-          <br />
-          I'm Buddha.<span id="wave-emoji" role="img" aria-label="waving hand"
-            >👋</span
-          >
-          <br />
-          Fullstack Developer, crafting solutions for 5+ years.
-          <br />
-          Welcome to my portfolio website.
-        </p>
-        <div class="home-subheader-container">
-          <div>
-            <i class="fa-solid fa-briefcase"></i>
-            <p><strong>Recent Experience</strong></p>
-            <p>Web developer @ The Tech Academy</p>
+        <div id="HomeHeader" class="homeheader-div-container">
+          <p class="homeheader-p bold">
+            <br />
+            I'm Buddha.<span id="wave-emoji" role="img" aria-label="waving hand"
+              >👋</span
+            >
+            <br />
+            Fullstack Developer, crafting solutions for 5+ years.
+            <br />
+            Welcome to my portfolio website.
+          </p>
+          <div class="home-subheader-container">
+            <!-- <div>
+              <i class="fa-solid fa-briefcase"></i>
+              <p><strong>Recent Experience</strong></p>
+              <p>Web developer @ The Tech Academy</p>
+            </div> -->
+            <div>
+              <!-- <p><strong>Location</strong></p> -->
+              <p><i class="fa-solid fa-location-dot"></i>London, UK</p>
+            </div>
           </div>
-          <div>
-            <i class="fa-solid fa-location-dot"></i>
-            <p><strong>Location</strong></p>
-            <p>London, UK</p>
+        </div>
+      </section>
+
+      <section id="Projects">
+        <!-- <h3><i class="fa-solid fa-briefcase"></i>&nbsp; Projects</h3> -->
+        <div id="ProjectsContainer" class="project-container card">
+          <button onclick="prevSlide()" class="carousel-btn carousel-btn-prev">
+            <img src="images/prev.svg" alt="Previous Button" />
+          </button>
+          <button onclick="nextSlide()" class="carousel-btn carousel-btn-next">
+            <img src="images/next.svg" alt="Next Button" />
+          </button>
+          <div class="projectimg-container">
+            <div class="projectimg-div active">
+              <img
+                src="images/projects/v2/danphecare-ss.jpg"
+                alt="Screenshot of D-Care project"
+              />
+            </div>
+            <div class="projectimg-div">
+              <img
+                src="images/projects/v2/icard-ss.jpg"
+                alt="Screenshot of I-Card project"
+              />
+            </div>
+            <div class="projectimg-div">
+              <img
+                src="images/projects/v2/ramailogames-ss.jpg"
+                alt="Screenshot of RGames project"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -182,38 +222,27 @@
           </div>
         </div>
       </section>
-      <section id="Projects">
-        <!-- <h3><i class="fa-solid fa-briefcase"></i>&nbsp; Projects</h3> -->
-        <div class="project-container card">
-          <button onclick="prevSlide()" class="carousel-btn carousel-btn-prev">
-            <img src="images/prev.svg" alt="Previous Button" />
-          </button>
-          <button onclick="nextSlide()" class="carousel-btn carousel-btn-next">
-            <img src="images/next.svg" alt="Next Button" />
-          </button>
-          <div class="projectimg-container">
-            <div class="projectimg-div active">
-              <img
-                src="images/projects/v2/danphecare-ss.jpg"
-                alt="Screenshot of D-Care project"
-              />
-            </div>
-            <div class="projectimg-div">
-              <img
-                src="images/projects/v2/icard-ss.jpg"
-                alt="Screenshot of I-Card project"
-              />
-            </div>
-            <div class="projectimg-div">
-              <img
-                src="images/projects/v2/ramailogames-ss.jpg"
-                alt="Screenshot of RGames project"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
       <section id="Contact">
+        <div class="contact-header">
+          <h2>Get In Touch</h2>
+        </div>
+        <div class="contact-div-container">
+          <form>
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+          </form>
+        </div>
         <div class="social-icons">
           <a href="https://www.instagram.com/idolentbudha/">
             <img src="images/icons/GitHub.png" alt="Github icon" />
@@ -268,6 +297,41 @@
 
       // Show the first slide on load
       showSlide(currentIndex);
+
+      const NavSection = document.getElementById("Nav");
+      const homeheaderContainer = document.querySelector("#HomeHeader");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+              homeheaderContainer.classList.add("is-pinned");
+            } else {
+              homeheaderContainer.classList.remove("is-pinned");
+            }
+          });
+        },
+        { threshold: 0.4 }
+      );
+
+      observer.observe(NavSection);
+
+      const HomeSection = document.getElementById("Home");
+      const observer2 = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            console.log("observer2: ", entry);
+            if (!entry.isIntersecting) {
+              homeheaderContainer.classList.add("fade-out");
+            } else {
+              homeheaderContainer.classList.remove("fade-out");
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      observer2.observe(HomeSection);
     </script>
   </body>
 </html>
