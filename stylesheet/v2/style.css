@@ -53,6 +53,8 @@
   --border-radius-sm: 0.25rem;
   --border-radius-md: 0.5rem;
   --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+  --border-radius-xxl: 2em;
   --border-radius-full: 9999px;
 
   /*Block */
@@ -262,7 +264,7 @@ nav ul li a:focus {
   gap: var(--spacing-lg);
 }
 .tech-card {
-  width: 10%;
+  flex: 1;
   height: 100%;
   border: #0e0f11 1px solid;
   display: flex;
@@ -271,46 +273,62 @@ nav ul li a:focus {
   transition: width 0.5s linear;
   padding: var(--spacing-lg);
   position: relative;
+  cursor: pointer;
   box-shadow: 0px 0px 100px rgba(27, 26, 26, 0.3) !important;
 }
 
-.tech-card.active {
-  width: 60%;
-  transition: width 0.5s ease-in-out;
+.techheader-div-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.techheader-div-container {
-  width: 10%;
-  text-align: center;
+.techheader-div-container > h2 {
+  transform: scale(1);
+  transition: transform 0.3s ease;
 }
-.techcard-header {
-  cursor: pointer;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
+
+.techheader-div-container:hover {
+  transform: rotate(-10deg);
+  transition: transform 0.3s ease-in;
 }
+
 .tech-items-container {
   padding: var(--spacing-lg);
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  display: none;
 }
+
 .tech-items {
-  width: 90%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   gap: var(--spacing-md);
-}
-
-.tech-items-container.active {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.stack-div-card {
 }
 
 .tech-items img {
   height: 2em;
   width: 2em;
+}
+
+.tech-card.active {
+  flex: 3;
+  cursor: default;
+  transition: flex 0.5s ease-in;
+}
+
+.tech-card.active > .techheader-div-container {
+  display: none;
+}
+.tech-card.active > .tech-items-container {
+  opacity: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-md);
+  width: 100%;
 }
 
 /**PROJECTS**/
@@ -479,7 +497,7 @@ button[type="submit"]:hover {
 }
 .card {
   border: 0px solid var(--color-light);
-  border-radius: var(--border-radius-lg);
+  border-radius: var(--border-radius-xxl);
   overflow: hidden;
   box-shadow: 0px 0px 100px rgba(27, 26, 26, 0.4);
   background-color: var(--color-card-background);
