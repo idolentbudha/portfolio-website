@@ -206,6 +206,37 @@ nav ul li a:focus {
   height: 100%;
 }
 
+#name {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-50px);
+}
+#wave-emoji {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-5px);
+}
+#name.anim-in {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  animation: slide-in 0.5s ease forwards;
+}
+
+#wave-emoji.anim-in {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  animation: slide-in 0.5s ease forwards;
+}
+
+@keyframes slide-in {
+  90% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .homeheader-div-container {
 }
 
@@ -519,5 +550,5 @@ button[type="submit"]:hover {
 
 .fade-out {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }

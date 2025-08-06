@@ -58,9 +58,8 @@
         <div id="HomeHeader" class="homeheader-div-container">
           <p class="homeheader-p bold">
             <br />
-            I'm Buddha.<span id="wave-emoji" role="img" aria-label="waving hand"
-              >👋</span
-            >
+            <span id="name">I'm Buddha.</span
+            ><span id="wave-emoji" role="img" aria-label="waving hand">👋</span>
             <br />
             Fullstack Developer, crafting solutions for 5+ years.
             <br />
@@ -336,6 +335,16 @@
       );
 
       observer2.observe(HomeSection);
+
+      window.onload = function () {
+        console.log("loaded");
+        document.getElementById("name").classList.add("anim-in");
+
+        setTimeout(function () {
+          // This code will run after the specified delay
+          document.getElementById("wave-emoji").classList.add("anim-in");
+        }, 550);
+      };
     </script>
   </body>
 </html>
